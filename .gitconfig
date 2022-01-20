@@ -8,5 +8,5 @@
 	email = alvin@statsnips.com
 [core]
 	editor = nano
-	filemode=false
+	filemode = false
 	autocrlf = input
