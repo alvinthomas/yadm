@@ -22,6 +22,24 @@ else
 	ZSH_THEME="powerlevel10k/powerlevel10k"
 fi
 
+if grep -q -i microsoft /proc/version; then
+  # on WSL: version contains the string "microsoft"
+  alias copy="clip.exe"
+  alias paste="powershell.exe Get-Clipboard"
+elif grep -q -i cygwin $(uname -a); then
+  # on CYGWIN: uname contains the string "cygwin"
+  alias copy="/dev/clipboard"
+  alias paste="cat /dev/clipboard"
+elif [[ ! -r /proc/version ]]; then
+  # on MAC: version is not readable at all
+  alias copy="pbcopy"
+  alias paste="pbpaste"
+else
+  # on "normal" linux
+  alias copy="xclip -sel clip"
+  alias paste="xclip -sel clip -o"
+fi
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -90,6 +108,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.bash_aliases
 
 # User configuration
 
