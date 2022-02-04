@@ -11,7 +11,7 @@ else
     then
         alias stata='/usr/local/stata15/stata-se'
 
-    elif [[ "$system_info" = "Darwin" ]] 
+    elif [[ "$system_info" == *Darwin* ]]
     then
         alias stata='/Applications/Stata/StataSE.app/Contents/MacOS/stata-se'
     else
