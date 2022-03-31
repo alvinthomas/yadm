@@ -7,6 +7,8 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib:/home/linuxbrew/.linuxbrew/lib
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
