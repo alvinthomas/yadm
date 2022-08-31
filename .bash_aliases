@@ -7,6 +7,7 @@ else
     alias longleaf='ssh agt13@longleaf.unc.edu'
     alias jhpcex='ssh -X athomas@jhpce01.jhsph.edu'
     alias longleafx='ssh -X agt13@longleaf.unc.edu'
+    alias bigpurple='ssh thomaa52@bigpurple.nyumc.org'
     if [[ "$system_info" == *microsoft* ]]
     then
         alias stata='/usr/local/stata15/stata-se'
